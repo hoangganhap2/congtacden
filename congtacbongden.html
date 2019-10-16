@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="switchl.swtichOn()">Bật đèn</button>
+<button type="button" onclick="switchl.swtichOff()">Tắt đèn</button>
+<script>
+function ElectricLamp(status) {
+    this.status=false;
+    this.turnOn = function () {
+        this.status = true;
+    };
+    this.turnOff = function () {
+        this.status = false;
+    };
+}
+function SwitchButton(status) {
+    this.status=false;
+    this.swtichOff=function () {
+       light.turnOff();
+       alert("Đèn đã tắt")
+    };
+    this.swtichOn=function () {
+         light.turnOn();
+         alert("Đèn đã bật")
+    };
+}
+let light=new ElectricLamp(false)
+let switchl=new SwitchButton(false)
+
+</script>
+</body>
+</html>
